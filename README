@@ -1,0 +1,31 @@
+spec-query
+==========
+
+This is a small utility to query specs for Ruby on Rails projects.
+This is useful if:
+* you want to run specs that only contain some keywords
+* you have a lot of slow specs and do not have a good organization of them
+
+Install
+=======
+
+If you are using bundler, add this to the Gemfile:
+
+gem "spec_query", :require => nil
+
+No need for require, this is used only through a rake task.
+
+You need to install the rake task manually. The easiest way is to find spec_query/lib/tasks/spec_query.rake in your GEM_PATH (run: `gem env` in console) and copy it to your projects lib/tasks.
+
+Copy
+
+Examples
+========
+
+# for help
+rake q:spec # see help
+rake q:spec q="keyword" # run only specs that have a keyword
+rake q:spec q='keyword1&&keyword2||keyword3&&keyword4' # || is or, && is and
+rake q:spec q='regexp --r' # use regexp
+rake q:spec q='Case Sensitive statement --c' use case sensitive
+

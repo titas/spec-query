@@ -1,0 +1,5 @@
+Extentions
+==========
+
+If you want to add custom behavior to this gem you can do it via extentions. These modules will extend the SpecQuery::Query class. Default convention: extentions should be named *_query_ext.rb and put in ./spec directory. See examples for code.
+
